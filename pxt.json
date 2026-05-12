@@ -3,8 +3,7 @@
     "version": "0.0.1",
     "description": "A MakeCode extension for music playback and scale generation with tilt bending.",
     "dependencies": {
-        "core": "*",
-        "music": "*"
+        "core": "*"
     },
     "files": [
         "main.ts",
@@ -13,6 +12,7 @@
     "testFiles": [
         "test.ts"
     ],
+    "public": true,
     "targetVersions": {
         "target": "8.0.21",
         "targetId": "microbit"
@@ -20,6 +20,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj",
-    "public": true
+    "preferredEditor": "blocksprj"
 }
