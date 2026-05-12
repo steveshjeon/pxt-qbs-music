@@ -41,9 +41,12 @@ enum SoundEffect {
     Vibrato = 1
 }
 
-//% color=#0fbc11 icon="\uf001" weight=90 block="QBS"
+/**
+ * QBS Music Extension
+ */
+//% color=#0fbc11 icon="\uf001" weight=90
 //% groups='["Music Config", "Play"]'
-namespace qbs {
+namespace QBS {
     let currentScale = ScaleType.Major;
     let scaleRootMidi = 48; // default to C3
     let startingNoteMidi = 55; // default to G3
