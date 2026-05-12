@@ -1,52 +1,52 @@
-enum NoteKey {
-    //% block="C"
-    C = 0,
-    //% block="C#"
-    CSharp = 1,
-    //% block="D"
-    D = 2,
-    //% block="D#"
-    DSharp = 3,
-    //% block="E"
-    E = 4,
-    //% block="F"
-    F = 5,
-    //% block="F#"
-    FSharp = 6,
-    //% block="G"
-    G = 7,
-    //% block="G#"
-    GSharp = 8,
-    //% block="A"
-    A = 9,
-    //% block="A#"
-    ASharp = 10,
-    //% block="B"
-    B = 11
-}
-
-enum ScaleType {
-    //% block="Major"
-    Major = 0,
-    //% block="Minor"
-    Minor = 1,
-    //% block="Pentatonic"
-    Pentatonic = 2
-}
-
-enum SoundEffect {
-    //% block="Flat (Straight Tone)"
-    Flat = 0,
-    //% block="Beautiful Vibrato"
-    Vibrato = 1
-}
-
 /**
  * QBS Music Extension
  */
 //% color=#0fbc11 icon="\uf001" weight=90
 //% groups='["Music Config", "Play"]'
 namespace QBS {
+    export enum NoteKey {
+        //% block="C"
+        C = 0,
+        //% block="C#"
+        CSharp = 1,
+        //% block="D"
+        D = 2,
+        //% block="D#"
+        DSharp = 3,
+        //% block="E"
+        E = 4,
+        //% block="F"
+        F = 5,
+        //% block="F#"
+        FSharp = 6,
+        //% block="G"
+        G = 7,
+        //% block="G#"
+        GSharp = 8,
+        //% block="A"
+        A = 9,
+        //% block="A#"
+        ASharp = 10,
+        //% block="B"
+        B = 11
+    }
+
+    export enum ScaleType {
+        //% block="Major"
+        Major = 0,
+        //% block="Minor"
+        Minor = 1,
+        //% block="Pentatonic"
+        Pentatonic = 2
+    }
+
+    export enum SoundEffect {
+        //% block="Flat (Straight Tone)"
+        Flat = 0,
+        //% block="Beautiful Vibrato"
+        Vibrato = 1
+    }
+
     let currentScale = ScaleType.Major;
     let scaleRootMidi = 48; // default to C3
     let startingNoteMidi = 55; // default to G3
