@@ -7,10 +7,19 @@
         "music": "*"
     },
     "files": [
-        "main.ts"
+        "main.ts",
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "8.0.21",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj",
     "public": true
 }
