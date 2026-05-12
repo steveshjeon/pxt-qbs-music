@@ -2,7 +2,6 @@
  * QBS Music Extension
  */
 //% color=#0fbc11 icon="\uf001" weight=90
-//% groups='["Music Config", "Play"]'
 namespace QBS {
     export enum NoteKey {
         //% block="C"
@@ -60,12 +59,11 @@ namespace QBS {
      * @param octave the starting octave, eg: 3
      * @param count number of available notes, eg: 20
      */
-    //% block="set music config | scale root $root type $scale | starting note $note octave $octave | notes available $count"
+    //% block="set music config scale root $root type $scale starting note $note octave $octave notes available $count"
     //% root.defl=NoteKey.C scale.defl=ScaleType.Major
     //% note.defl=NoteKey.G octave.defl=3 octave.min=0 octave.max=8
     //% count.defl=20 count.min=1 count.max=50
-    //% group="Music Config" weight=100
-    //% help="jeons1qbs/pxt-qbs-music/docs/setup-music"
+    //% weight=100
     export function setupMusic(root: NoteKey, scale: ScaleType, note: NoteKey, octave: number, count: number): void {
         currentScale = scale;
         // Assume octave 3 for root logic (it repeats anyway)
@@ -116,8 +114,7 @@ namespace QBS {
      */
     //% block="🎵 play note $index with $effect effect"
     //% index.defl=0
-    //% group="Play" weight=90
-    //% help="jeons1qbs/pxt-qbs-music/docs/play-note"
+    //% weight=90
     export function playNote(index: number, effect: SoundEffect): void {
         // Constrain index
         if (index < 0) index = 0;
@@ -146,8 +143,7 @@ namespace QBS {
      * Stops the music playback immediately.
      */
     //% block="⏹️ stop playing note"
-    //% group="Play" weight=80
-    //% help="jeons1qbs/pxt-qbs-music/docs/stop-note"
+    //% weight=80
     export function stopNote(): void {
         music.rest(0);
     }
