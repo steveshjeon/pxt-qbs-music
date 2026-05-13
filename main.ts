@@ -64,7 +64,7 @@ namespace QBS {
     //% note.defl=NoteKey.G octave.defl=3 octave.min=0 octave.max=8
     //% count.defl=20 count.min=1 count.max=50
     //% weight=100
-    //% help="github:steveshjeon/pxt-qbs-music/docs/setup-music"
+    //% help=setup-music
     export function setupMusic(root: NoteKey, scale: ScaleType, note: NoteKey, octave: number, count: number): void {
         currentScale = scale;
         // Assume octave 3 for root logic (it repeats anyway)
@@ -116,7 +116,7 @@ namespace QBS {
     //% block="🎵 play note $index with $effect effect"
     //% index.defl=0
     //% weight=90
-    //% help="github:steveshjeon/pxt-qbs-music/docs/play-note"
+    //% help=play-note
     export function playNote(index: number, effect: SoundEffect): void {
         // Constrain index
         if (index < 0) index = 0;
@@ -145,7 +145,7 @@ namespace QBS {
      */
     //% block="⏹️ stop playing note"
     //% weight=80
-    //% help="github:steveshjeon/pxt-qbs-music/docs/stop-note"
+    //% help=stop-note
     export function stopNote(): void {
         music.rest(0);
     }
