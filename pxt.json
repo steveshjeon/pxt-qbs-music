@@ -1,6 +1,6 @@
 {
     "name": "qbs-music",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A MakeCode extension for music playback and scale generation with tilt bending.",
     "dependencies": {
         "core": "*"
