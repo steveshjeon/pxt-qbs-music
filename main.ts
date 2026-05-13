@@ -76,13 +76,13 @@ namespace QBS {
     function isNoteInScale(midi: number, scaleRoot: number, type: ScaleType): boolean {
         let semitone = (midi - scaleRoot) % 12;
         if (semitone < 0) semitone += 12;
-        
+
         if (type == ScaleType.Major) {
-            return semitone == 0 || semitone == 2 || semitone == 4 || semitone == 5 || 
-                   semitone == 7 || semitone == 9 || semitone == 11;
+            return semitone == 0 || semitone == 2 || semitone == 4 || semitone == 5 ||
+                semitone == 7 || semitone == 9 || semitone == 11;
         } else if (type == ScaleType.Minor) {
-            return semitone == 0 || semitone == 2 || semitone == 3 || semitone == 5 || 
-                   semitone == 7 || semitone == 8 || semitone == 10;
+            return semitone == 0 || semitone == 2 || semitone == 3 || semitone == 5 ||
+                semitone == 7 || semitone == 8 || semitone == 10;
         } else if (type == ScaleType.Pentatonic) {
             return semitone == 0 || semitone == 2 || semitone == 4 || semitone == 7 || semitone == 9;
         }
@@ -91,12 +91,12 @@ namespace QBS {
 
     function getMidiFromIndex(targetIndex: number): number {
         let midi = startingNoteMidi;
-        
+
         // Find the 0th note (first note in scale >= startingNoteMidi)
         while (!isNoteInScale(midi, scaleRootMidi, currentScale)) {
             midi++;
         }
-        
+
         // Step forward targetIndex times
         for (let i = 0; i < targetIndex; i++) {
             midi++;
@@ -123,7 +123,7 @@ namespace QBS {
         if (index >= noteCount) index = noteCount - 1;
 
         let baseMidi = getMidiFromIndex(index);
-        
+
         // Pitch bend from buttons
         let pitchModifier = 0;
         if (input.buttonIsPressed(Button.A)) { pitchModifier = -1; }
